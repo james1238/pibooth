@@ -157,7 +157,7 @@ add_default_option("CAMERA", "iso", 100,
 add_default_option("CAMERA", "flip", False,
                    "Flip horizontally the capture")
 
-add_default_option("HDR", "hdr", False,
+add_default_option("CAMERA", "hdr", False,
                   "enable HDR, your camera must support this true/false",
                   "hdr", ['True', 'False'])
 
