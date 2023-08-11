@@ -52,7 +52,8 @@ class LibCamera(BaseCamera):
         """Camera initialization.
         """
         self._cam.stop()
-        self._hdr['format'] = 'BGR888'
+        self._preview_config['format'] = 'BGR888'
+        self._preview_config['hdr'] = self.hdr
         self._preview_config['transform'] = Transform(rotation=self.preview_rotation, hflip=self.preview_flip)
         self._cam.configure(self._preview_config)
 
