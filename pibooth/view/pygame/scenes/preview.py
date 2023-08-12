@@ -16,8 +16,8 @@ class PreviewScene(BasePygameScene):
         self.status_bar.hide()
 
         # Preview capture
-        self.image.set_rect(self.rect.width // 6, 10,
-                            self.rect.width * 2 // 3, self.rect.height * 7 // 8)
+        self.image.set_rect(self.rect.width // 3, 10,
+                            self.rect.width * 4 // 2, self.rect.height * 7 // 4)
 
         # Left image
         height = self.rect.height // 4

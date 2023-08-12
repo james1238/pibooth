@@ -35,9 +35,9 @@ class WaitScene(BasePygameScene):
 
     def resize(self, size):
         # Previous picture
-        self.image.set_rect(self.rect.centerx, 0, self.rect.width // 2, self.rect.height)
-        self.image_check.set_rect(*self.image.rect.inflate(-self.image.rect.width // 2,
-                                                           -self.image.rect.width // 2))
+        self.image.set_rect(self.rect.centerx, 0, self.rect.width, self.rect.height)
+        self.image_check.set_rect(*self.image.rect.inflate(-self.image.rect.width,
+                                                           -self.image.rect.width))
 
         # Take picture text
         text_border = 20
@@ -51,7 +51,7 @@ class WaitScene(BasePygameScene):
             self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
             self.text.set_rect(text_border, text_border,
                                self.rect.width // 2 - 2 * text_border,
-                               self.rect.height * 0.6 - text_border)
+                               self.rect.height // 2 - text_border)
         elif self.arrow_location == self.ARROW_TOUCH:
             self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
             self.text.set_rect(text_border, text_border,
