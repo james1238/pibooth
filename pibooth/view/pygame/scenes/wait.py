@@ -50,7 +50,7 @@ class WaitScene(BasePygameScene):
         elif self.arrow_location == self.ARROW_BOTTOM:
             self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
             self.text.set_rect(text_border, text_border,
-                               self.rect.width // 2 - 2 * text_border,
+                               self.rect.width,
                                self.rect.height - text_border)
         elif self.arrow_location == self.ARROW_TOUCH:
             self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
