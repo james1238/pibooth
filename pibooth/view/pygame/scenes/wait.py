@@ -36,8 +36,7 @@ class WaitScene(BasePygameScene):
     def resize(self, size):
         # Previous picture
         self.image.set_rect(self.rect.centerx, 0 - self.rect.width, self.rect.width, self.rect.height)
-        self.image_check.set_rect(*self.image.rect.inflate(-self.image.rect.width // 4,
-                                                           -self.image.rect.width // 4))
+        self.image_check.set_rect(0, -200, self.rect.width, self.rect.height)
 
         # Take picture text
         text_border = 20
