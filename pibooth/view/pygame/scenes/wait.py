@@ -51,7 +51,7 @@ class WaitScene(BasePygameScene):
             self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
             self.text.set_rect(text_border, text_border,
                                self.rect.width // 2 - 2 * text_border,
-                               self.rect.height - 50)
+                               self.rect.height - 200)
         elif self.arrow_location == self.ARROW_TOUCH:
             self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
             self.text.set_rect(text_border, text_border,
@@ -65,7 +65,7 @@ class WaitScene(BasePygameScene):
 
         # Print text
         self.text_print.set_text(get_translated_text('intro_print'))  # In case of text has changed
-        rect = pygame.Rect(self.rect.width * 0.8, 0, self.rect.width * 0.2, self.rect.height * 0.2)
+        rect = pygame.Rect(self.rect.width * 0.6, 200, self.rect.width * 0.2, self.rect.height * 0.2)
         if self.arrow_location == self.ARROW_TOP:
             rect.top = self.rect.height * 0.11
         else:
