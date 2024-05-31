@@ -89,7 +89,20 @@ class WaitScene(BasePygameScene):
             self.left_arrow.set_rect(x, y, size[0], size[1])
 
         # Right arrow
-        self.arrow_location == self.ARROW_BOTTOM:
+        size = (self.rect.width * 0.1, self.rect.height * 0.1)
+        x = self.rect.centerx - size[0]
+        if self.arrow_location == self.ARROW_TOP:
+            y = self.rect.top + 10
+        else:
+            y = self.rect.bottom - size[1] - 10
+        if self.arrow_location == self.ARROW_TOUCH:
+            self.right_arrow.set_skin('touch_print.png')
+            self.right_arrow.set_flip(hflip=False)
+        elif self.arrow_location in (self.ARROW_BOTTOM, self.ARROW_TOP):
+            self.right_arrow.set_skin('arrow.png')
+            self.right_arrow.set_angle(-160)
+        if self.arrow_location != self.ARROW_HIDDEN:
+            self.right_arrow.set_rect(x, y, size[0], size[1])
              self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
              self.text.set_rect(text_border, text_border,
                                 self.rect.width // 2 - 2 * text_border,
