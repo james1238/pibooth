@@ -103,10 +103,6 @@ class WaitScene(BasePygameScene):
             self.right_arrow.set_angle(-160)
         if self.arrow_location != self.ARROW_HIDDEN:
             self.right_arrow.set_rect(x, y, size[0], size[1])
-             self.text.set_align(fonts.ALIGN_BOTTOM_CENTER)
-             self.text.set_rect(text_border, text_border,
-                                self.rect.width // 2 - 2 * text_border,
-                                self.rect.height - 400)
 
     def update(self, events):
 
