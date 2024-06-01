@@ -64,11 +64,11 @@ class WaitScene(BasePygameScene):
 
         # Print text
         self.text_print.set_text(get_translated_text('intro_print'))  # In case of text has changed
-        rect = pygame.Rect(self.rect.width * 0.7, 200, self.rect.width * 0.2, self.rect.height * 0.3)
+        rect = pygame.Rect(self.rect.width * 0.7, 200, 300, self.rect.height * 0.2)
         if self.arrow_location == self.ARROW_TOP:
             rect.top = self.rect.height * 0.11
         else:
-            rect.bottom = self.rect.height - self.rect.height * 0.3
+            rect.bottom = self.rect.height - self.rect.height * 0.11
         self.text_print.set_rect(*rect)
 
         # Left arrow
