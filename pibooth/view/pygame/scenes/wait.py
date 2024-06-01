@@ -64,7 +64,7 @@ class WaitScene(BasePygameScene):
 
         # Print text
         self.text_print.set_text(get_translated_text('intro_print'))  # In case of text has changed
-        rect = pygame.Rect(450, 200, 400, 200)
+        rect = pygame.Rect(520, 200, 400, 200)
         if self.arrow_location == self.ARROW_TOP:
             rect.top = self.rect.height * 0.11
         else:
@@ -101,7 +101,7 @@ class WaitScene(BasePygameScene):
         elif self.arrow_location in (self.ARROW_BOTTOM, self.ARROW_TOP):
             self.right_arrow.set_skin('arrow.png')
             self.right_arrow.set_angle(1)
-            self.right_arrow.set_rect(350, y, 100, 100)
+            self.right_arrow.set_rect(550, y, 100, 100)
         if self.arrow_location != self.ARROW_HIDDEN:
             self.right_arrow.set_rect(x, y, size[0], size[1])
 
