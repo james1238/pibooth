@@ -39,7 +39,7 @@ class WaitScene(BasePygameScene):
         #self.image_check.set_rect(0, -200, self.rect.width, self.rect.height)
 
         # Take picture text
-        text_border = 20
+        text_border = 100
         self.text.set_text(get_translated_text('intro'))  # In case of text has changed
         if self.arrow_location == self.ARROW_HIDDEN:
             self.text.set_align(fonts.ALIGN_CENTER)
