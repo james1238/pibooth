@@ -90,7 +90,7 @@ class WaitScene(BasePygameScene):
 
         # Right arrow
         size = (self.rect.width * 0.1, self.rect.height * 0.1)
-        x = self.rect.centerx + 100
+        x = self.rect.centerx + 200
         if self.arrow_location == self.ARROW_TOP:
             y = self.rect.top + 10
         else:
